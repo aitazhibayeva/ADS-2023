@@ -1,0 +1,36 @@
+Function RabinKarpSearch(text, pattern):
+    Set base = 256  // typically ASCII values
+    Set prime = 101  // a chosen prime number
+    
+    Set n = length of text
+    Set m = length of pattern
+    
+    Set patternHash = 0
+    Set textHash = 0
+    Set h = 1
+    
+    // Pre-compute h to help in recalculating the hash
+    For i from 1 to m-1:
+        h = (h * base) mod prime
+
+    // Calculate the initial hash values for pattern and the first window of text
+    For i from 0 to m-1:
+        patternHash = (base * patternHash + ASCII value of pattern[i]) mod prime
+        textHash = (base * textHash + ASCII value of text[i]) mod prime
+
+    // Slide the pattern over the text
+    For i from 0 to n-m:
+        // If the hash values match and the actual substrings match
+        If patternHash == textHash:
+            If text from i to i+m-1 == pattern:
+                Return i  // Starting index of a match
+        
+        // Recalculate the hash value for the next window of text
+        If i < n-m:
+            textHash = (base * (textHash - ASCII value of text[i] * h) + ASCII value of text[i+m]) mod prime
+            
+            // If we get a negative value, convert it to positive
+            If textHash < 0:
+                textHash = textHash + prime
+
+    Return -1  // No match found
