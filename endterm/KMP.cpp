@@ -2,13 +2,10 @@
 using namespace std;
 
 void computePrefix(string p, int m, int lps[]) 
-{ 
-    // length of the previous longest prefix suffix 
+{  
     int l = 0; 
   
-    lps[0] = 0; // lps[0] is always 0 
-  
-    //calculating lps[i] for i = 1 to M-1 
+    lps[0] = 0;
     int i = 1; 
     while (i < m) { 
         if (p[i] == p[l]) { 
