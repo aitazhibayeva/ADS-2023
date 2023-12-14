@@ -1,3 +1,5 @@
+// Given two binary strings a and b, return their sum as a binary string.
+
 #include <iostream>
 #include <string>
 using namespace std;
