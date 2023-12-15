@@ -43,7 +43,6 @@ int main() {
     ListNode* result = solution.swapPairs(head);
     ListNode* current = head;
     current = result;
-    cout << "Modified List: ";
     while (current != nullptr) {
         cout << current->val << " ";
         current = current->next;

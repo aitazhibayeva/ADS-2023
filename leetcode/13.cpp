@@ -35,11 +35,11 @@ public:
 
 int main() {
     Solution solution;
-    vector<int> candidates1 = {2, 3, 6, 7};
-    int target1 = 7;
-    vector<vector<int>> result1 = solution.combinationSum(candidates1, target1);
+    vector<int> candidates = {2, 3, 6, 7};
+    int target = 7;
+    vector<vector<int>> result = solution.combinationSum(candidates, target);
 
-    for (auto& res : result1) {
+    for (auto& res : result) {
         for (int i = 0; i < res.size(); ++i) {
             cout << res[i];
         }
