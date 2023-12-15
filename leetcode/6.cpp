@@ -7,7 +7,6 @@
 #include <iostream>
 #include <string>
 #include <stack>
-
 using namespace std;
 
 class Solution{
@@ -35,9 +34,6 @@ public:
 int main(){
     Solution solution;
 
-    string s1 = "()";
-    string s2 = "(){}[]";
-    string s3 = "(]";
-
-    cout<<solution.isValid(s1);
+    string s = "()";
+    cout<<solution.isValid(s);
 }

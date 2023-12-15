@@ -9,7 +9,7 @@ public:
         if (n == 0) {
             return 1.0;
         }
-        double result = 1.0;
+        double res = 1.0;
         long long power = n; 
         if (n < 0) {
             x = 1 / x;
@@ -17,12 +17,12 @@ public:
         }
         while (power > 0) {
             if (power % 2 == 1) {
-                result *= x;
+                res *= x;
             }
             x *= x;
             power /= 2;
         }
-        return result;
+        return res;
     }
 };
 

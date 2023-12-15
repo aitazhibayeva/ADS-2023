@@ -10,7 +10,6 @@ public:
         string first = to_string(x);
         string second = first;
         reverse(second.begin(), second.end());
-
         if(first == second){
             return true;
         }

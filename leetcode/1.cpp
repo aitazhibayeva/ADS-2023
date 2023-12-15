@@ -8,7 +8,6 @@ class Solution{
 public: 
     int findSpecialInteger(vector<int> &v){
         int SpeInt = v.size()/4;
-
         for(int i=0; i<v.size()-SpeInt; i++){
             if(v[i] == v[i+SpeInt]){
                 return v[i];
@@ -21,9 +20,7 @@ public:
 int main(){
     Solution solution;
 
-    vector<int> v1 = {1,2,2,6,6,6,6,7,10};
-    vector<int> v2 = {1,1};
+    vector<int> v = {1,2,2,6,6,6,6,7,10};
 
-    cout<<solution.findSpecialInteger(v1);
-    // cout<<solution.findSpecialInteger(v2);
+    cout<<solution.findSpecialInteger(v);
 }

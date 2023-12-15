@@ -28,7 +28,6 @@ public:
         return result;
     }
 };
-
 int main(){
     Solution solution;
     string a = "11";

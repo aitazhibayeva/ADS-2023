@@ -4,7 +4,6 @@
 
 #include <iostream>
 #include <unordered_map>
-
 using namespace std;
 
 class Solution {
@@ -20,9 +19,7 @@ public:
             {'D', 500},
             {'M', 1000}
         };
-
         int res=0;
-
         for(int i=0; i<s.size(); i++){
             if(i<s.size()-1 && roman[s[i]]<roman[s[i+1]]){
                 res += roman[s[i+1]] - roman[s[i]];

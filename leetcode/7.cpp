@@ -22,10 +22,8 @@ public:
         if (list2 == nullptr) {
             return list1;
         }
-
         ListNode* temp = new ListNode(0);
         ListNode* curr = temp;
-
         while (list1 != nullptr && list2 != nullptr) {
             if (list1->val < list2->val) {
                 curr->next = list1;
@@ -36,14 +34,12 @@ public:
             }
             curr = curr->next;
         }
-
         if (list1 != nullptr) {
             curr->next = list1;
         }
         if (list2 != nullptr) {
             curr->next = list2;
         }
-
         ListNode* mergedList = temp->next;
         delete temp;
         return mergedList;

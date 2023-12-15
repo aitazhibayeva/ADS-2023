@@ -23,7 +23,6 @@ public:
             combination.pop_back(); 
         }
     }
-
     vector<vector<int>> combinationSum(vector<int>& candidates, int target) {
         vector<vector<int>> result;
         vector<int> combination;
@@ -31,8 +30,6 @@ public:
         return result;
     }
 };
-
-
 int main() {
     Solution solution;
     vector<int> candidates = {2, 3, 6, 7};
@@ -44,5 +41,4 @@ int main() {
             cout << res[i];
         }
     }
-
 }

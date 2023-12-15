@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 class Solution {
@@ -12,25 +11,22 @@ public:
         if(strs.empty()){
             return "";
         }
-
-        string prefix = strs[0];
+        string pref = strs[0];
         for(int i=1; i<strs.size(); i++){
-            while(strs[i].find(prefix) != 0){
-                prefix = prefix.substr(0, prefix.length()-1);
-                if(prefix.empty()){
+            while(strs[i].find(pref) != 0){
+                pref = pref.substr(0, pref.length()-1);
+                if(pref.empty()){
                     return "";
                 }
             }
         }
-        return prefix;
+        return pref;
     }
 };
 
 int main(){
     Solution solution;
 
-    vector<string> ex1 = {"flower", "flow", "flight"};
-    vector<string> ex2 = {"dog", "rececar", "car"};
-
-    cout<<solution.longestCommonPrefix(ex1);
+    vector<string> ex = {"flower", "flow", "flight"};
+    cout<<solution.longestCommonPrefix(ex);
 }

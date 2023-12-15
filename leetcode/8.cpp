@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 class Solution {
@@ -19,7 +18,6 @@ public:
                 ++uniq;
             }
         }
-
         return uniq;
     }
 };
@@ -28,7 +26,6 @@ int main() {
     vector<int> nums = {0, 0, 1, 1, 1, 2, 2, 3, 3, 4};
 
     int k = solution.removeDuplicates(nums);
-
     for (int i = 0; i < k; ++i) {
         cout << nums[i]<<" ";
     }

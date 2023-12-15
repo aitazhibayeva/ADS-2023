@@ -18,7 +18,6 @@ public:
             length++;
             i--;
         }
-
         return length;
     }
 };
